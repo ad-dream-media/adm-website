@@ -69,7 +69,11 @@ export default function Header() {
                 alt="Ad Dream Media" 
                 width={280} 
                 height={160}
-                className="h-28 md:h-36 lg:h-44 w-auto transition-transform duration-300 group-hover:scale-105"
+                className={`w-auto transition-all duration-500 group-hover:scale-105 ${
+                  scrolled 
+                    ? "h-12 md:h-14 lg:h-16" 
+                    : "h-28 md:h-36 lg:h-44"
+                }`}
                 priority
               />
             </Link>
@@ -101,7 +105,7 @@ export default function Header() {
           </nav>
 
           <button 
-            className="md:hidden text-white p-2 relative w-10 h-10"
+            className="md:hidden text-white p-2 relative w-10 h-10 mt-5"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
