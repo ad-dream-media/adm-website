@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ComingSoonPopup from "@/components/ComingSoonPopup";
 
 export const metadata: Metadata = {
   title: "AD Dream Media | Online Marketing, Done Right.",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="antialiased">
+        <ComingSoonPopup />
         {children}
       </body>
     </html>
