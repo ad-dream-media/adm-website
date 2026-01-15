@@ -61,21 +61,21 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          <div ref={logoRef} className="relative z-10">
+        <div className="flex items-start justify-between h-20">
+          <div ref={logoRef} className="relative z-10 pt-4">
             <Link href="/" className="flex items-center group">
               <Image 
                 src="/logo.png" 
                 alt="Ad Dream Media" 
                 width={280} 
                 height={160}
-                className="h-32 md:h-40 lg:h-48 w-auto transition-transform duration-300 group-hover:scale-105 -my-8"
+                className="h-28 md:h-36 lg:h-44 w-auto transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>
           </div>
 
-          <nav ref={navRef} className="hidden md:flex items-center gap-8">
+          <nav ref={navRef} className="hidden md:flex items-center gap-8 h-20">
             {navLinks.map((link) => (
               link.isPage ? (
                 <Link 
